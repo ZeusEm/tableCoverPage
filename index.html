@@ -43,8 +43,6 @@
             </p>
           </div>
 
-          <p id="coordinates"></p>
-
           <div class="mastfoot">
             <div class="inner">
               <p>
@@ -72,7 +70,8 @@
 
     <!-- Page JS -->
     <script>
-		var x = document.getElementById("coordinates");
+		/*var home_shubham_latitude = 28.596778;
+		var home_shubham_longitude = 77.05165850000002;
 
 		function getLocation() {
 		    if (navigator.geolocation)
@@ -85,9 +84,51 @@
 		    }
 		}
 
-		function showPosition(position)
+		function redirect(position)
 		{
-		    x.innerHTML = "Latitude: " + position.coords.latitude + "<br>" + "Longitude: " + position.coords.longitude;
+		    if((position.coords.latitude == 28.596778) && (position.coords.longitude == 77.05165850000002)) 
+		    	window.location = redirect.html;
+		}*/
+		window.onload=function()
+		{
+		    if(navigator.geolocation)
+		    {
+		    	navigator.geolocation.getCurrentPosition(showPosition,showError);
+		    }
+		    else
+		    {
+		    	alert("Geolocation is not supported by this browser.");
+		    }
+	    }
+	    function showError(error)
+	    {
+	    	switch(error.code)
+	        {
+		        case error.PERMISSION_DENIED:
+		          alert("User denied the request for Geolocation.")
+		          break;
+		        case error.POSITION_UNAVAILABLE:
+		          alert("Location information is unavailable.")
+		          break;
+		        case error.TIMEOUT:
+		          alert("The request to get user location timed out.")
+		          break;
+		        case error.UNKNOWN_ERROR:
+		          alert("An unknown error occurred.")
+		          break;
+	        }
+	    }
+
+	    function showPosition(pos)
+		{
+			if (pos.coords.longitude >= 77.04 && pos.coords.longitude <= 77.06 && pos.coords.latitude <= 28.58 && pos.coords.latitude >= 28.60)
+        	{
+            	window.location = 'success.html';
+        	}
+        	else
+        	{
+            	window.location = 'other.html';
+        	}
 		}
 	</script>
   </body>
