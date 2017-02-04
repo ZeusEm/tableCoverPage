@@ -72,24 +72,8 @@
     <script>
 		/*var home_shubham_latitude = 28.596778;
 		var home_shubham_longitude = 77.05165850000002;
-
-		function getLocation() {
-		    if (navigator.geolocation)
-		    {
-		        navigator.geolocation.getCurrentPosition(showPosition);
-		    }
-		    else
-		    {
-		        x.innerHTML = "Geolocation is not supported by this browser.";
-		    }
-		}
-
-		function redirect(position)
-		{
-		    if((position.coords.latitude == 28.596778) && (position.coords.longitude == 77.05165850000002)) 
-		    	window.location = redirect.html;
-		}*/
-		window.onload=function()
+		*/
+		function getLocation()
 		{
 		    if(navigator.geolocation)
 		    {
@@ -121,7 +105,7 @@
 
 	    function showPosition(pos)
 		{
-			if (pos.coords.longitude >= 77.04 && pos.coords.longitude <= 77.06 && pos.coords.latitude <= 28.58 && pos.coords.latitude >= 28.60)
+			if (pos.coords.longitude >= 77.0516 && pos.coords.longitude <= 77.0518 && pos.coords.latitude <= 28.5969 && pos.coords.latitude >= 28.5967)
         	{
             	window.location = 'success.html';
         	}
