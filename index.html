@@ -70,8 +70,8 @@
 
     <!-- Page JS -->
     <script>
-		/*var home_shubham_latitude = 28.596778;
-		var home_shubham_longitude = 77.05165850000002;
+		/*var home_shubham_latitude = 28.596993042804655;
+		var home_shubham_longitude = 77.05163812401724;
 		*/
 		function getLocation()
 		{
@@ -104,16 +104,16 @@
 	    }
 
 	    function showPosition(pos)
-		{
-			if (pos.coords.longitude >= 77.0516 && pos.coords.longitude <= 77.0518 && pos.coords.latitude <= 28.5969 && pos.coords.latitude >= 28.5967)
-        	{
-            	window.location = 'success.html';
-        	}
-        	else
-        	{
-            	window.location = 'failure.html';
-        	}
-		}
+		  {
+        if (pos.coords.longitude >= 77.051 && pos.coords.longitude <= 77.052 && pos.coords.latitude >= 28.596 && pos.coords.latitude <= 28.598)
+      	{
+          window.location = 'menu.html';
+      	}
+      	else
+      	{
+          window.location = 'failure.html';
+      	}
+		  }
 	</script>
   </body>
 </html>
