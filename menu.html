@@ -14,6 +14,14 @@
 
     <!-- Custom styles for this template -->
     <link href="styles/album.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style type="text/css">
+      .custom-modal-content
+      {
+        padding-bottom: 10px;
+      }
+    </style>
   </head>
 
   <body>
@@ -50,6 +58,8 @@
         <h1 class="jumbotron-heading">Menu</h1>
         <p class="lead text-muted">Order from the wide variety of vegetarian, non-vegetarian pizzas, sides and drinks.</p>
       </div>
+      <a href="#" id="topmost_button_left" class="btn btn-primary topmost_button_left"><img src="glyphicons/glyphicons-540-cart-tick.png">&nbsp; Proceed to Checkout</a>
+      <a href="#" id="topmost_button_right" class="btn btn-secondary"><img src="glyphicons/glyphicons-210-cart-out.png">&nbsp; Empty Cart</a>
     </section>
 
     <div class="album text-muted">
@@ -60,15 +70,64 @@
             <p class="card-text" style="text-align: center;">
               <strong>Veg Extravaganza</strong>
               <br>
-              Olives, Onion, Capsicum, Mushroom, Tomato, Corn, Jalapeno & Cheese
+              Olives | Onion | Capsicum | Mushroom | Tomato | Corn | Jalepeno | Cheese
             </p>
-          </div><!--
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>-->
+          </div>
+          <div class="card" data-toggle="modal" data-target="#Modal2" style="cursor: pointer;">
+            <img src="images/cloud9.jpg" alt="Cloud 9" style="width: 100%; height: 100%;">
+            <p class="card-text" style="text-align: center;">
+              <strong>Cloud 9</strong>
+              <br>
+              Onion | Tomato | Babycorn | Paneer | Capsicum | Jalepeno
+            </p>
+          </div>
+          <div class="card" data-toggle="modal" data-target="#Modal3" style="cursor: pointer;">
+            <img src="images/chefs_veg_wonder.jpg" alt="Chef's Veg Wonder" style="width: 100%; height: 100%;">
+            <p class="card-text" style="text-align: center;">
+              <strong>Chef's Veg Wonder</strong>
+              <br>
+              Mushroom | Jalepeno | Babycorn | Capsicum | Paneer | Red Paparika
+            </p>
+          </div>
+          <div class="card" data-toggle="modal" data-target="#Modal4" style="cursor: pointer;">
+            <img src="images/burger_pizza_premium_veg.png" alt="Burger Pizza: Premium Veg" style="width: 100%; height: 100%;">
+            <p class="card-text" style="text-align: center;">
+              <strong>Burger Pizza: Premium Veg</strong>
+              <br>
+              Capsicum | Paneer | Red Paparika | Tomato
+            </p>
+          </div>
+          <div class="card" data-toggle="modal" data-target="#Modal5" style="cursor: pointer;">
+            <img src="images/white_pasta_italiano_veg.png" alt="White Pasta Italiano (Veg)" style="width: 100%; height: 100%;">
+            <p class="card-text" style="text-align: center;">
+              <strong>White Pasta Italiano (Veg)</strong>
+            </p>
+          </div>
+          <div class="card" data-toggle="modal" data-target="#Modal6" style="cursor: pointer;">
+            <img src="images/stuffed_garlic_breadsticks.png" alt="Stuffed Garlic Breadsticks" style="width: 100%; height: 100%;">
+            <p class="card-text" style="text-align: center;">
+              <strong>Stuffed Garlic Breadsticks</strong>
+            </p>
+          </div>
+          <div class="card" data-toggle="modal" data-target="#Modal7" style="cursor: pointer;">
+            <img src="images/cheese_jalapeno_dip.png" alt="Cheese Jalapeno Dip" style="width: 100%; height: 100%;">
+            <p class="card-text" style="text-align: center;">
+              <strong>Cheese Jalapeno Dip</strong>
+            </p>
+          </div>
+          <div class="card" data-toggle="modal" data-target="#Modal8" style="cursor: pointer;">
+            <img src="images/coke.png" alt="Coke" style="width: 100%; height: 100%;">
+            <p class="card-text" style="text-align: center;">
+              <strong>Coke</strong>
+            </p>
+          </div>
+          <div class="card" data-toggle="modal" data-target="#Modal9" style="cursor: pointer;">
+            <img src="images/choco_lava.png" alt="Choco Lava Cake" style="width: 100%; height: 100%;">
+            <p class="card-text" style="text-align: center;">
+              <strong>Choco Lava Cake</strong>
+            </p>
+          </div>
         </div>
-
       </div>
     </div>
 
@@ -82,10 +141,287 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            <p>
+              <div class="custom-modal-content">
+                <strong>Crust</strong>: Classic Hand Tossed
+              </div>
+              <div class="custom-modal-content">
+                <strong>Size</strong>:&nbsp;&nbsp;
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary active" onclick="changePrice('230');">
+                    <input type="radio" name="options" id="option1" checked autocomplete="off"> Small
+                  </label>
+                  <label class="btn btn-primary" onclick="changePrice('440');">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Medium
+                  </label>
+                  <label class="btn btn-primary" onclick="changePrice('655');">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Large
+                  </label>
+                </div>
+              </div>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; <span id="price">230</span>
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity();">+</button>
+                <input id="quantityNo" class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity();">-</button>
+              </div>
+            </p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Modal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Cloud 9">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Cloud 9">Cloud 9</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <div class="custom-modal-content">
+                <strong>Crust</strong>: Classic Hand Tossed
+              </div>
+              <div class="custom-modal-content">
+                <strong>Size</strong>:&nbsp;&nbsp;
+                <button type="button" class="btn btn-outline-secondary active" style="color: black; cursor: pointer;"">Small</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;">Medium</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;">Large</button>
+              </div>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; 230
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
+                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Modal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Chef's Veg Wonder">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Chef's Veg Wonder">Chef's Veg Wonder</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <div class="custom-modal-content">
+                <strong>Crust</strong>: Classic Hand Tossed
+              </div>
+              <div class="custom-modal-content">
+                <strong>Size</strong>:&nbsp;&nbsp;
+                <button type="button" class="btn btn-outline-secondary active" style="color: black; cursor: pointer;"">Small</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;">Medium</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;">Large</button>
+              </div>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; 230
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
+                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Modal4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Burger Pizza: Premium Veg">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Burger Pizza: Premium Veg">Burger Pizza: Premium Veg</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; 119
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
+                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Modal5" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="White Pasta Italiano (Veg)">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="White Pasta Italiano (Veg)">White Pasta Italiano (Veg)</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; 129
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
+                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Modal6" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Stuffed Garlic Breadsticks">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Stuffed Garlic Breadsticks">Stuffed Garlic Breadsticks</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; 129
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
+                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Modal7" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Cheese Jalapeno Dip">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Cheese Jalapeno Dip">Cheese Jalapeno Dip</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; 25
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
+                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Modal8" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Coke">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Coke">Coke</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; 60
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
+                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Modal9" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Choco Lava Cake">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Choco Lava Cake">Choco Lava Cake</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <div class="custom-modal-content">
+                <strong>Price</strong>: &#8377; 89
+              </div>
+              <div class="custom-modal-content">
+                <strong>Quantity</strong>:
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
+                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"><img src="glyphicons/glyphicons-209-cart-in.png">&nbsp; Add to Cart</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -97,8 +433,8 @@
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+        <p>&copy; <a href="index.html">Table</a></p>
+        <p>Designed with <img src="glyphicons/glyphicons-heart-empty.png"> by <a href="https://www.linkedin.com/in/shubham-mehta-b15a54a0/">Shubham Mehta</a> on <a href="https://getbootstrap.com">Bootstrap</a></p>
       </div>
     </footer>
 
@@ -117,5 +453,26 @@
     <script src="scripts/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="scripts/ie10-viewport-bug-workaround.js"></script>
-  </body>
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript">
+      function changePrice(newPrice)
+      {
+        document.getElementById("price").innerHTML = newPrice;
+      }
+      function increaseQuantity()
+      {
+          var value = parseInt(document.getElementById('quantityNo').value, 10);
+          value = isNaN(value) ? 0 : value;
+          value++;
+          document.getElementById('quantityNo').value = value;
+      }
+      function decreaseQuantity()
+      {
+          var value = parseInt(document.getElementById('quantityNo').value, 10);
+          value = isNaN(value) ? 0 : value;
+          value--;
+          document.getElementById('quantityNo').value = value;
+      }
+    </script>
 </html>
