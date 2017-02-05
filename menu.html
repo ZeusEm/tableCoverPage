@@ -58,8 +58,11 @@
         <h1 class="jumbotron-heading">Menu</h1>
         <p class="lead text-muted">Order from the wide variety of vegetarian, non-vegetarian pizzas, sides and drinks.</p>
       </div>
-      <a href="#" id="topmost_button_left" class="btn btn-primary topmost_button_left"><img src="glyphicons/glyphicons-540-cart-tick.png">&nbsp; Proceed to Checkout</a>
-      <a href="#" id="topmost_button_right" class="btn btn-secondary"><img src="glyphicons/glyphicons-210-cart-out.png">&nbsp; Empty Cart</a>
+      <p>
+        <br>
+        <a href="#" id="topmost_button_left" class="btn btn-primary topmost_button_left"><img src="glyphicons/glyphicons-540-cart-tick.png">&nbsp; Proceed to Checkout</a>
+        <a href="#" id="topmost_button_right" class="btn btn-secondary"><img src="glyphicons/glyphicons-210-cart-out.png">&nbsp; Empty Cart</a>
+      </p>
     </section>
 
     <div class="album text-muted">
@@ -148,25 +151,25 @@
               <div class="custom-modal-content">
                 <strong>Size</strong>:&nbsp;&nbsp;
                 <div class="btn-group" data-toggle="buttons">
-                  <label class="btn btn-primary active" onclick="changePrice('230');">
+                  <label class="btn btn-primary active" onclick="changePrice1('230');">
                     <input type="radio" name="options" id="option1" checked autocomplete="off"> Small
                   </label>
-                  <label class="btn btn-primary" onclick="changePrice('440');">
+                  <label class="btn btn-primary" onclick="changePrice1('440');">
                     <input type="radio" name="options" id="option2" autocomplete="off"> Medium
                   </label>
-                  <label class="btn btn-primary" onclick="changePrice('655');">
+                  <label class="btn btn-primary" onclick="changePrice1('655');">
                     <input type="radio" name="options" id="option3" autocomplete="off"> Large
                   </label>
                 </div>
               </div>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; <span id="price">230</span>
+                <strong>Unit Price</strong>: &#8377; <span id="price1">230</span>
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity();">+</button>
-                <input id="quantityNo" class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity();">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo1');">+</button>
+                <input id="quantityNo1" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo1');">-</button>
               </div>
             </p>
           </div>
@@ -193,18 +196,26 @@
               </div>
               <div class="custom-modal-content">
                 <strong>Size</strong>:&nbsp;&nbsp;
-                <button type="button" class="btn btn-outline-secondary active" style="color: black; cursor: pointer;"">Small</button>
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;">Medium</button>
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;">Large</button>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary active" onclick="changePrice2('230');">
+                    <input type="radio" name="options" id="option1" checked autocomplete="off"> Small
+                  </label>
+                  <label class="btn btn-primary" onclick="changePrice2('440');">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Medium
+                  </label>
+                  <label class="btn btn-primary" onclick="changePrice2('655');">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Large
+                  </label>
+                </div>
               </div>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; 230
+                <strong>Unit Price</strong>: &#8377; <span id="price2">230</span>
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
-                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo2');">+</button>
+                <input id="quantityNo2" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo2');">-</button>
               </div>
             </p>
           </div>
@@ -231,18 +242,26 @@
               </div>
               <div class="custom-modal-content">
                 <strong>Size</strong>:&nbsp;&nbsp;
-                <button type="button" class="btn btn-outline-secondary active" style="color: black; cursor: pointer;"">Small</button>
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;">Medium</button>
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;">Large</button>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary active" onclick="changePrice3('230');">
+                    <input type="radio" name="options" id="option1" checked autocomplete="off"> Small
+                  </label>
+                  <label class="btn btn-primary" onclick="changePrice3('440');">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Medium
+                  </label>
+                  <label class="btn btn-primary" onclick="changePrice3('655');">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Large
+                  </label>
+                </div>
               </div>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; 230
+                <strong>Unit Price</strong>: &#8377; <span id="price3">230</span>
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
-                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo3');">+</button>
+                <input id="quantityNo3" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo3');">-</button>
               </div>
             </p>
           </div>
@@ -265,13 +284,13 @@
           <div class="modal-body">
             <p>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; 119
+                <strong>Unit Price</strong>: &#8377; 119
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
-                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo4');">+</button>
+                <input id="quantityNo4" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo4');">-</button>
               </div>
             </p>
           </div>
@@ -294,13 +313,13 @@
           <div class="modal-body">
             <p>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; 129
+                <strong>Unit Price</strong>: &#8377; 129
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
-                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo5');">+</button>
+                <input id="quantityNo5" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo5');">-</button>
               </div>
             </p>
           </div>
@@ -323,13 +342,13 @@
           <div class="modal-body">
             <p>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; 129
+                <strong>Unit Price</strong>: &#8377; 129
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
-                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo6');">+</button>
+                <input id="quantityNo6" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo6');">-</button>
               </div>
             </p>
           </div>
@@ -352,13 +371,13 @@
           <div class="modal-body">
             <p>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; 25
+                <strong>Unit Price</strong>: &#8377; 25
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
-                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo7');">+</button>
+                <input id="quantityNo7" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo7');">-</button>
               </div>
             </p>
           </div>
@@ -381,13 +400,13 @@
           <div class="modal-body">
             <p>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; 60
+                <strong>Unit Price</strong>: &#8377; 60
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
-                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo8');">+</button>
+                <input id="quantityNo8" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo8');">-</button>
               </div>
             </p>
           </div>
@@ -410,13 +429,13 @@
           <div class="modal-body">
             <p>
               <div class="custom-modal-content">
-                <strong>Price</strong>: &#8377; 89
+                <strong>Unit Price</strong>: &#8377; 89
               </div>
               <div class="custom-modal-content">
                 <strong>Quantity</strong>:
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">+</button>
-                <input class="form-control" type="text" value="1" style="width: 10%; display: inline-block; position: relative; top: 1px;">
-                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;"">-</button>
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="increaseQuantity('quantityNo9');">+</button>
+                <input id="quantityNo9" class="form-control" type="text" value="1" style="width: 15%; display: inline-block; position: relative; top: 1px;">
+                <button type="button" class="btn btn-outline-secondary" style="color: black; cursor: pointer;" onclick="decreaseQuantity('quantityNo9');">-</button>
               </div>
             </p>
           </div>
@@ -456,23 +475,31 @@
 
     <!-- Custom Scripts -->
     <script type="text/javascript">
-      function changePrice(newPrice)
+      function changePrice1(newPrice1)
       {
-        document.getElementById("price").innerHTML = newPrice;
+        document.getElementById("price1").innerHTML = newPrice1;
       }
-      function increaseQuantity()
+      function changePrice2(newPrice2)
       {
-          var value = parseInt(document.getElementById('quantityNo').value, 10);
+        document.getElementById("price2").innerHTML = newPrice2;
+      }
+      function changePrice3(newPrice3)
+      {
+        document.getElementById("price3").innerHTML = newPrice3;
+      }
+      function increaseQuantity(quantity)
+      {
+          var value = parseInt(document.getElementById(quantity).value, 10);
           value = isNaN(value) ? 0 : value;
           value++;
-          document.getElementById('quantityNo').value = value;
+          document.getElementById(quantity).value = value;
       }
-      function decreaseQuantity()
+      function decreaseQuantity(quantity)
       {
-          var value = parseInt(document.getElementById('quantityNo').value, 10);
+          var value = parseInt(document.getElementById(quantity).value, 10);
           value = isNaN(value) ? 0 : value;
           value--;
-          document.getElementById('quantityNo').value = value;
+          document.getElementById(quantity).value = value;
       }
     </script>
 </html>
